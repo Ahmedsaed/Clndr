@@ -1,0 +1,33 @@
+body {
+	margin: 0;
+	background-color: #fbfcfd;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+}
+
+#window {
+	background-color: white;
+	border: 1px solid var(--text-color-level3,rgba(26,26,26,0.1));
+	border-radius: 8px;
+	box-shadow: 0 1px 8px 0 rgb(0 0 0/8%);
+	min-width: 550px;
+	max-width: 800px;
+	transition: all .22s ease-out;
+	padding: 10px;
+
+	display: flex;
+	flex: 1 1 auto;
+}
+
+#meeting-detials {
+	border-right: 1px solid var(--text-color-level3,rgba(26,26,26,0.1));
+	width: 50%;
+	padding: 5px;
+}
+
+#meeting-calendar {
+	padding: 5px;
+	width: 50%;
+}
