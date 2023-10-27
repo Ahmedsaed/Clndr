@@ -5,6 +5,7 @@ body {
 	justify-content: center;
 	align-items: center;
 	min-height: 100vh;
+	font-family: 'Roboto', sans-serif;
 }
 
 #window {
@@ -13,7 +14,8 @@ body {
 	border-radius: 8px;
 	box-shadow: 0 1px 8px 0 rgb(0 0 0/8%);
 	min-width: 550px;
-	max-width: 800px;
+	max-width: 1000px;
+	max-height: 600px;
 	transition: all .22s ease-out;
 	padding: 10px;
 
@@ -23,11 +25,105 @@ body {
 
 #meeting-detials {
 	border-right: 1px solid var(--text-color-level3,rgba(26,26,26,0.1));
-	width: 50%;
-	padding: 5px;
+	width: 40%;
+	padding: 10px;
+}
+
+#user-info > p {
+	color: gray;
+}
+
+#meeting-info > p {
+	margin: 0px;
+	margin-bottom: 2px;
 }
 
 #meeting-calendar {
-	padding: 5px;
-	width: 50%;
+	padding: 10px;
+	width: 60%;
+
+	display: flex;
+	flex-direction: column;
+	/* height: 100%; */
+}
+
+#schedule-header {
+	flex: 0 1 auto;
+}
+
+#schedule-options {
+	flex: 0 1 auto;
+	display: flex;
+	flex-direction: row;
+	justify-content: right;
+	align-items: center;
+}
+
+#schedule {
+	flex: 1 1 auto;
+	overflow: auto;
+}
+
+#info-title {
+	color: #004796;
+	font-weight: bold;
+}
+
+#info-desc {
+	font-size: large;
+	margin-bottom: 15px;
+}
+
+#week-number {
+	color: gray;
+	font-weight: bold;
+}
+
+#day-info {
+	margin: 5px 0px;
+	font-weight: bold;
+}
+
+#cal-btn-group {
+	margin-bottom: 20px;
+}
+
+#cal-btn-group > button {
+	margin: 0 12px 8px 0;
+	width: 150px;
+	height: 40px;
+
+	background-color: transparent;
+
+	border: 1px solid rgba(0,105,255,0.5);
+	border-radius: 4px;
+	transition: background-color 300ms ease-out, border-color 300ms ease-out;
+
+	color: rgb(0,105,255);
+	font-weight: 700;
+	font-size: 16px;
+	text-align: left;
+}
+
+#schedule-options > button {
+    padding: 8px 16px;
+
+	margin-left: 15px;
+    border: 1px solid transparent;
+    border-radius: 40px;
+
+	border-color: rgba(0,95,230,1);
+    background-color: rgba(0,95,230,1);
+	color: rgba(255,255,255,1);
+
+    font-size: 14px;
+	font-weight: 700;
+    line-height: 22px;
+
+	min-width: 128px;
+}
+
+#selected-slots {
+	font-size: 14px;
+	color: gray;
 }
