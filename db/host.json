@@ -1,0 +1,19 @@
+{
+    "hosts": [
+        {
+            "User ID": 101,
+            "Username": "JohnDoe",
+            "User Photo": "john_doe.jpg"
+        },
+        {
+            "User ID": 102,
+            "Username": "JaneSmith",
+            "User Photo": "jane_smith.jpg"
+        },
+        {
+            "User ID": 103,
+            "Username": "MikeJohnson",
+            "User Photo": "mike_johnson.jpg"
+        }
+    ]
+}

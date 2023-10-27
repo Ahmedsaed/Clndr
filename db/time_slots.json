@@ -1,0 +1,67 @@
+{
+    "time_slots": [
+        {
+            "SlotID": 1,
+            "Date": "2023-11-10",
+            "Time": "09:00 AM",
+            "Vote Count": 10,
+            "EventID": 1
+        },
+        {
+            "SlotID": 2,
+            "Date": "2023-11-11",
+            "Time": "02:30 PM",
+            "Vote Count": 5,
+            "EventID": 1
+        },
+        {
+            "SlotID": 3,
+            "Date": "2023-11-15",
+            "Time": "11:00 AM",
+            "Vote Count": 7,
+            "EventID": 2
+        },
+        {
+            "SlotID": 4,
+            "Date": "2023-11-16",
+            "Time": "04:45 PM",
+            "Vote Count": 12,
+            "EventID": 2
+        },
+        {
+            "SlotID": 5,
+            "Date": "2023-11-20",
+            "Time": "03:30 PM",
+            "Vote Count": 8,
+            "EventID": 1
+        },
+        {
+            "SlotID": 6,
+            "Date": "2023-11-21",
+            "Time": "10:00 AM",
+            "Vote Count": 6,
+            "EventID": 3
+        },
+        {
+            "SlotID": 7,
+            "Date": "2023-11-25",
+            "Time": "01:15 PM",
+            "Vote Count": 15,
+            "EventID": 2
+        },
+        {
+            "SlotID": 8,
+            "Date": "2023-11-28",
+            "Time": "05:30 PM",
+            "Vote Count": 9,
+            "EventID": 3
+        },
+        {
+            "SlotID": 9,
+            "Date": "2023-12-01",
+            "Time": "08:45 AM",
+            "Vote Count": 11,
+            "EventID": 3
+        }
+    ]
+}
