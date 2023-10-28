@@ -23,7 +23,7 @@ body {
 	flex: 1 1 auto;
 }
 
-#meeting-detials {
+#event-detials {
 	border-right: 1px solid var(--text-color-level3,rgba(26,26,26,0.1));
 	width: 40%;
 	padding: 10px;
@@ -31,14 +31,22 @@ body {
 
 #user-info > p {
 	color: gray;
+	margin-top: 5px;
 }
 
-#meeting-info > p {
-	margin: 0px;
-	margin-bottom: 2px;
+#user-info > img {
+	width: 65px;
+	height: 65px;
+	border-radius: 50%;
 }
 
-#meeting-calendar {
+#event-info > p {
+	margin: 0px 0px 5px 0px;
+	color: gray;
+	font-weight: bold;
+}
+
+#event-calendar {
 	padding: 10px;
 	width: 60%;
 
