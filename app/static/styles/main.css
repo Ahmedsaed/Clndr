@@ -113,6 +113,23 @@ body {
 	text-align: left;
 }
 
+#cal-btn-group > button > div {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+
+#cal-btn-group > button > div > div:nth-child(2) {
+	width: 2ch;
+	height: 2ch;
+	text-align: center;
+	background-color: rgb(219, 217, 217);
+	border-radius: 50%;
+	margin-right: 5px;
+	padding: 5px;
+}
+
 #schedule-options > button {
     padding: 8px 16px;
 

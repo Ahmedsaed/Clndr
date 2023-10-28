@@ -1,5 +1,8 @@
 // Client Side Logic
 
+let base_url = "http://127.0.0.1:5000"
+let selected_slots = []
+
 function updateEventInfo(data) {
 	let event_name = document.getElementById("event-name");
   let [event_duration, event_location] = document.getElementById("event-info").children;
@@ -15,7 +18,26 @@ function updateUserInfo(data) {
   let [user_photo, user_name] = document.getElementById("user-info").children
 
   user_name.textContent = data["name"]
-  user_photo.src = `http://127.0.0.1:5001/static/images/${data["photo_id"]}.png`
+  user_photo.src = `${base_url}/static/images/${data["photo_id"]}.png`
+}
+
+// Function called when a time-slot is clicked
+function handleTimeSlotClick(slot) {
+  // Grabs the counter for the clicked time slot, updates it with an increment.
+  const counterElement = slot.children[0].children[1];
+
+  if (selected_slots.indexOf(slot) == -1) {
+    const count = parseInt(counterElement.textContent, 10);
+    const newCount = count + 1;
+    counterElement.textContent = newCount;
+    selected_slots.push(slot);
+  }
+  else {
+    const count = parseInt(counterElement.textContent, 10);
+    const newCount = count - 1;
+    counterElement.textContent = newCount;
+    selected_slots.splice(selected_slots.indexOf(slot), 1);
+  }
 }
 
 function updateScheduleInfo(data) {
@@ -113,7 +135,22 @@ function updateScheduleInfo(data) {
 
         sortedTimeSlots.forEach(slot => {
             const timeButton = document.createElement('button');
-            timeButton.textContent = slot.time;
+
+            timeButton.innerHTML = `
+              <div>
+                <div>
+                  ${slot.time}
+                </div>
+                <div>
+                  ${slot.vote_count}
+                </div>
+              </div>
+            `
+
+            timeButton.addEventListener("click", (e) => {
+              handleTimeSlotClick(timeButton);
+            });
+
             calBtnGroup.appendChild(timeButton);
         });
 
@@ -124,7 +161,7 @@ function updateScheduleInfo(data) {
   }
 }
 
-fetch(`http://127.0.0.1:5001/api/event/${event_id}`)
+fetch(`${base_url}/api/event/${event_id}`)
   .then(response => {
     if (!response.ok) {
       throw new Error(`HTTP error! Status: ${response.status}`);
@@ -134,7 +171,7 @@ fetch(`http://127.0.0.1:5001/api/event/${event_id}`)
   })
   .then(data => {
     updateEventInfo(data)
-    return fetch(`http://127.0.0.1:5001/api/host/${data["host_id"]}`)
+    return fetch(`${base_url}/api/host/${data["host_id"]}`)
   })
   .then(response => {
     if (!response.ok) {
@@ -144,7 +181,7 @@ fetch(`http://127.0.0.1:5001/api/event/${event_id}`)
   })
   .then(data => {
     updateUserInfo(data)
-    return fetch(`http://127.0.0.1:5001/api/time_slots/${event_id}`)
+    return fetch(`${base_url}/api/time_slots/${event_id}`)
   })
   .then(response => {
     if (!response.ok) {
@@ -158,22 +195,3 @@ fetch(`http://127.0.0.1:5001/api/event/${event_id}`)
   .catch(error => {
     console.error('Error:', error);
   });
-// Function called when a time-slot is clicked
-function handleTimeSlotClick(slot) {
-    // Grabs the counter for the clicked time slot, updates it with an increment.
-    const counterElement = slot.querySelector('.slot-counter');
-    const count = parseInt(counterElement.textContent, 10);
-    const newCount = count + 1;
-    counterElement.textContent = newCount;
-}
-
-
-// Add event listener for each time-slot
-document.addEventListener('DOMContentLoaded', function () {
-    const timeSlots = document.querySelectorAll('.time-slot');
-    timeSlots.forEach(slot => {
-        slot.addEventListener('click', () => {
-            handleTimeSlotClick();
-        });
-    });
-});
