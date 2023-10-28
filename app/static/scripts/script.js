@@ -6,3 +6,14 @@ function handleTimeSlotClick(slot) {
     const newCount = count + 1;
     counterElement.textContent = newCount;
 }
+
+
+// Add event listener for each time-slot
+document.addEventListener('DOMContentLoaded', function () {
+    const timeSlots = document.querySelectorAll('.time-slot');
+    timeSlots.forEach(slot => {
+        slot.addEventListener('click', () => {
+            handleTimeSlotClick();
+        });
+    });
+});
