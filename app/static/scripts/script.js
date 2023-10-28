@@ -25,6 +25,7 @@ function updateUserInfo(data) {
 function handleTimeSlotClick(slot) {
   // Grabs the counter for the clicked time slot, updates it with an increment.
   const counterElement = slot.children[0].children[1];
+  const selectedSlotsCounter = document.getElementById("selected-slots");
 
   if (selected_slots.indexOf(slot) == -1) {
     const count = parseInt(counterElement.textContent, 10);
@@ -38,6 +39,8 @@ function handleTimeSlotClick(slot) {
     counterElement.textContent = newCount;
     selected_slots.splice(selected_slots.indexOf(slot), 1);
   }
+
+  selectedSlotsCounter.textContent = `${selected_slots.length} times selected`
 }
 
 function updateScheduleInfo(data) {
