@@ -40,6 +40,8 @@ function handleTimeSlotClick(slot) {
     selected_slots.splice(selected_slots.indexOf(slot), 1);
   }
 
+  slot.classList.toggle("clicked");
+
   selectedSlotsCounter.textContent = `${selected_slots.length} times selected`
 }
 
