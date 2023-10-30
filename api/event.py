@@ -1,5 +1,6 @@
 from app import app
 from flask import render_template, request, make_response, jsonify
+from storage import get_event_by_id, get_host_by_id, get_time_slots_by_id, get_attendee_by_id
 
 
 # Define a route to retrieve event details
