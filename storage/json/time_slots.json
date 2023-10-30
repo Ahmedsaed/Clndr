@@ -1,67 +1,65 @@
-{
-    "time_slots": [
-        {
-            "SlotID": 1,
-            "Date": "2023-11-10",
-            "Time": "09:00 AM",
-            "Vote Count": 10,
-            "EventID": 1
-        },
-        {
-            "SlotID": 2,
-            "Date": "2023-11-11",
-            "Time": "02:30 PM",
-            "Vote Count": 5,
-            "EventID": 1
-        },
-        {
-            "SlotID": 3,
-            "Date": "2023-11-15",
-            "Time": "11:00 AM",
-            "Vote Count": 7,
-            "EventID": 2
-        },
-        {
-            "SlotID": 4,
-            "Date": "2023-11-16",
-            "Time": "04:45 PM",
-            "Vote Count": 12,
-            "EventID": 2
-        },
-        {
-            "SlotID": 5,
-            "Date": "2023-11-20",
-            "Time": "03:30 PM",
-            "Vote Count": 8,
-            "EventID": 1
-        },
-        {
-            "SlotID": 6,
-            "Date": "2023-11-21",
-            "Time": "10:00 AM",
-            "Vote Count": 6,
-            "EventID": 3
-        },
-        {
-            "SlotID": 7,
-            "Date": "2023-11-25",
-            "Time": "01:15 PM",
-            "Vote Count": 15,
-            "EventID": 2
-        },
-        {
-            "SlotID": 8,
-            "Date": "2023-11-28",
-            "Time": "05:30 PM",
-            "Vote Count": 9,
-            "EventID": 3
-        },
-        {
-            "SlotID": 9,
-            "Date": "2023-12-01",
-            "Time": "08:45 AM",
-            "Vote Count": 11,
-            "EventID": 3
-        }
-    ]
-}
+[
+    {
+        "id": 1,
+        "date": "1/11/2023",
+        "time": "09:00",
+        "vote_count": 10,
+        "event_id": 1
+    },
+    {
+        "id": 2,
+        "date": "1/11/2023",
+        "time": "02:30",
+        "vote_count": 5,
+        "event_id": 1
+    },
+    {
+        "id": 3,
+        "date": "1/11/2023",
+        "time": "11:00",
+        "vote_count": 7,
+        "event_id": 2
+    },
+    {
+        "id": 4,
+        "date": "12/11/2023",
+        "time": "04:45",
+        "vote_count": 12,
+        "event_id": 2
+    },
+    {
+        "id": 5,
+        "date": "12/11/2023",
+        "time": "03:30",
+        "vote_count": 8,
+        "event_id": 1
+    },
+    {
+        "id": 6,
+        "date": "12/11/2023",
+        "time": "10:00",
+        "vote_count": 6,
+        "event_id": 3
+    },
+    {
+        "id": 7,
+        "date": "1/12/2023",
+        "time": "01:15",
+        "vote_count": 15,
+        "event_id": 2
+    },
+    {
+        "id": 8,
+        "date": "1/12/2023",
+        "time": "05:30",
+        "vote_count": 9,
+        "event_id": 3
+    },
+    {
+        "id": 9,
+        "date": "1/12/2023",
+        "time": "08:45",
+        "vote_count": 11,
+        "event_id": 3
+    }
+]

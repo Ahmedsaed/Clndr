@@ -1,28 +1,26 @@
-{
-    "events": [
-        {
-            "EventID": 1,
-            "Event Name": "Tech Conference",
-            "Event Description": "A conference on the latest technology trends and innovations.",
-            "Event Duration": "2 days",
-            "Event Location": "City Convention Center",
-            "Host ID": 101
-        },
-        {
-            "EventID": 2,
-            "Event Name": "Music Festival",
-            "Event Description": "A weekend music festival featuring top artists from around the world.",
-            "Event Duration": "3 days",
-            "Event Location": "Riverside Park",
-            "Host ID": 102
-        },
-        {
-            "EventID": 3,
-            "Event Name": "Art Exhibition",
-            "Event Description": "An exhibition showcasing the work of local artists.",
-            "Event Duration": "1 week",
-            "Event Location": "Art Gallery",
-            "Host ID": 103
-        }
-    ]
-}
+[
+    {
+        "id": 1,
+        "name": "Tech Conference",
+        "description": "A conference on the latest technology trends and innovations.",
+        "duration": "20",
+        "location": "City Convention Center",
+        "host_id": 101
+    },
+    {
+        "id": 2,
+        "name": "Music Festival",
+        "description": "A weekend music festival featuring top artists from around the world.",
+        "duration": "30",
+        "location": "Riverside Park",
+        "host_id": 102
+    },
+    {
+        "id": 3,
+        "name": "Art Exhibition",
+        "description": "An exhibition showcasing the work of local artists.",
+        "duration": "10",
+        "location": "Art Gallery",
+        "host_id": 103
+    }
+]

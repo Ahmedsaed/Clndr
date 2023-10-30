@@ -120,8 +120,6 @@ function updateScheduleInfo(data) {
       return timeSlots.sort((a, b) => a.time.localeCompare(b.time));
   }
 
-  console.log(timeSlotsByDayAndWeek);
-
   // Loop through the parsed data and create the HTML structure
   for (const [weekLabel, days] of Object.entries(timeSlotsByDayAndWeek)) {
     const weekTemplate = document.createElement('div');

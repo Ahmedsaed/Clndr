@@ -1,19 +1,17 @@
-{
-    "hosts": [
-        {
-            "UserID": 101,
-            "Username": "JohnDoe",
-            "User Photo": "john_doe.jpg"
-        },
-        {
-            "UserID": 102,
-            "Username": "JaneSmith",
-            "User Photo": "jane_smith.jpg"
-        },
-        {
-            "UserID": 103,
-            "Username": "MikeJohnson",
-            "User Photo": "mike_johnson.jpg"
-        }
-    ]
-}
+[
+    {
+        "id": 101,
+        "name": "John Doe",
+        "photo_id": 2
+    },
+    {
+        "id": 102,
+        "name": "Jane Smith",
+        "photo_id": 2
+    },
+    {
+        "id": 103,
+        "name": "Mike Johnson",
+        "photo_id": 2
+    }
+]
