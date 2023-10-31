@@ -2,6 +2,7 @@
 
 let base_url = "http://127.0.0.1:5000"
 let selected_slots = []
+let nextBtn = document.getElementById("schedule-options").children[1]
 
 function updateEventInfo(data) {
 	let event_name = document.getElementById("event-name");
@@ -25,7 +26,8 @@ function updateUserInfo(data) {
 function handleTimeSlotClick(slot) {
   // Grabs the counter for the clicked time slot, updates it with an increment.
   const counterElement = slot.children[0].children[1];
-  const selectedSlotsCounter = document.getElementById("selected-slots");
+  const selectedSlots1Counter = document.getElementById("selected-slots-1");
+  const selectedSlots2Counter = document.getElementById("selected-slots-2");
 
   if (selected_slots.indexOf(slot) == -1) {
     const count = parseInt(counterElement.textContent, 10);
@@ -42,7 +44,8 @@ function handleTimeSlotClick(slot) {
 
   slot.classList.toggle("clicked");
 
-  selectedSlotsCounter.textContent = `${selected_slots.length} times selected`
+  selectedSlots1Counter.textContent = `${selected_slots.length} times selected`
+  selectedSlots2Counter.textContent = `${selected_slots.length} times selected`
 }
 
 function updateScheduleInfo(data) {
@@ -164,6 +167,20 @@ function updateScheduleInfo(data) {
   }
 }
 
+function setupEventListeners() {
+  nextBtn.addEventListener("click", () => {
+    let event_calendar = document.getElementById("event-calendar");
+    let event_form = document.getElementById("event-form");
+
+    event_calendar.style.opacity = 0;
+
+    setTimeout(() => {
+      event_calendar.classList.toggle("hidden");
+      event_form.classList.toggle("hidden");
+    }, 500);
+  })
+}
+
 fetch(`${base_url}/api/event/${event_id}`)
   .then(response => {
     if (!response.ok) {
@@ -193,7 +210,8 @@ fetch(`${base_url}/api/event/${event_id}`)
     return response.json();
   })
   .then(data => {
-    updateScheduleInfo(data)
+    updateScheduleInfo(data);
+    setupEventListeners();
   })
   .catch(error => {
     console.error('Error:', error);
