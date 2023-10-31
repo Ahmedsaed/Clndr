@@ -61,5 +61,75 @@
         "time": "08:45",
         "vote_count": 11,
         "event_id": 3
-    }
+    },
+    {
+        "id": 10,
+        "date": "1/12/2023",
+        "time": "12:30",
+        "vote_count": 6,
+        "event_id": 1
+    },
+    {
+        "id": 11,
+        "date": "1/12/2023",
+        "time": "04:00",
+        "vote_count": 8,
+        "event_id": 2
+    },
+    {
+        "id": 12,
+        "date": "2/12/2023",
+        "time": "08:15",
+        "vote_count": 9,
+        "event_id": 1
+    },
+    {
+        "id": 13,
+        "date": "2/12/2023",
+        "time": "03:45",
+        "vote_count": 10,
+        "event_id": 3
+    },
+    {
+        "id": 14,
+        "date": "2/12/2023",
+        "time": "10:30",
+        "vote_count": 7,
+        "event_id": 3
+    },
+    {
+        "id": 15,
+        "date": "3/12/2023",
+        "time": "06:30",
+        "vote_count": 12,
+        "event_id": 2
+    },
+    {
+        "id": 16,
+        "date": "3/12/2023",
+        "time": "11:45",
+        "vote_count": 5,
+        "event_id": 1
+    },
+    {
+        "id": 17,
+        "date": "3/12/2023",
+        "time": "02:00",
+        "vote_count": 11,
+        "event_id": 2
+    },
+    {
+        "id": 18,
+        "date": "4/12/2023",
+        "time": "09:15",
+        "vote_count": 8,
+        "event_id": 3
+    },
+    {
+        "id": 19,
+        "date": "4/12/2023",
+        "time": "05:45",
+        "vote_count": 9,
+        "event_id": 1
+    }   
 ]
