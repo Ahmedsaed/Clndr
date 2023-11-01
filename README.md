@@ -1,2 +1,0 @@
-# Clndr
-Group Meeting Scheduler 

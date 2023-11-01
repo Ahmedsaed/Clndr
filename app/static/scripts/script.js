@@ -1,8 +1,9 @@
 // Client Side Logic
 
-let base_url = "http://127.0.0.1:5000"
-let selected_slots = []
-let nextBtn = document.getElementById("schedule-options").children[1]
+let base_url = "http://127.0.0.1:5000";
+let selected_slots = [];
+let nextBtn = document.getElementById("schedule-options").children[1];
+let submitBtn = document.getElementById("submit-btn");
 
 function updateEventInfo(data) {
 	let event_name = document.getElementById("event-name");
@@ -16,10 +17,10 @@ function updateEventInfo(data) {
 }
 
 function updateUserInfo(data) {
-  let [user_photo, user_name] = document.getElementById("user-info").children
+  let [host_photo, host_name] = document.getElementById("user-info").children
 
-  user_name.textContent = data["name"]
-  user_photo.src = `${base_url}/static/images/${data["photo_id"]}.png`
+  host_name.textContent = data["name"]
+  host_photo.src = `${base_url}/static/images/${data["photo_id"]}.png`
 }
 
 // Function called when a time-slot is clicked
@@ -28,18 +29,19 @@ function handleTimeSlotClick(slot) {
   const counterElement = slot.children[0].children[1];
   const selectedSlots1Counter = document.getElementById("selected-slots-1");
   const selectedSlots2Counter = document.getElementById("selected-slots-2");
+  let slot_object = slot.dataset.object;
 
-  if (selected_slots.indexOf(slot) == -1) {
+  if (selected_slots.indexOf(slot_object) == -1) {
     const count = parseInt(counterElement.textContent, 10);
     const newCount = count + 1;
     counterElement.textContent = newCount;
-    selected_slots.push(slot);
+    selected_slots.push(slot_object);
   }
   else {
     const count = parseInt(counterElement.textContent, 10);
     const newCount = count - 1;
     counterElement.textContent = newCount;
-    selected_slots.splice(selected_slots.indexOf(slot), 1);
+    selected_slots.splice(selected_slots.indexOf(slot_object), 1);
   }
 
   slot.classList.toggle("clicked");
@@ -152,6 +154,7 @@ function updateScheduleInfo(data) {
                 </div>
               </div>
             `
+            timeButton.dataset.object = `${slot.id}`
 
             timeButton.addEventListener("click", (e) => {
               handleTimeSlotClick(timeButton);
@@ -179,9 +182,32 @@ function setupEventListeners() {
       event_form.classList.toggle("hidden");
     }, 500);
   })
+
+  submitBtn.addEventListener("click", () => {
+    let attendee_name = document.getElementById("name");
+    let attendee_email = document.getElementById("email");
+
+    data = {
+      "attendee_name": attendee_name.value,
+      "attendee_email": attendee_email.value,
+      "selected_slots": selected_slots,
+      "event_id": event_id
+    }
+
+    fetch(`/api/event/submission`, {
+      method: "POST",
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(data)
+    })
+      .then((response) => {
+        console.log(response.json())
+      })
+  })
 }
 
-fetch(`${base_url}/api/event/${event_id}`)
+fetch(`/api/event/${event_id}`)
   .then(response => {
     if (!response.ok) {
       throw new Error(`HTTP error! Status: ${response.status}`);
@@ -191,7 +217,7 @@ fetch(`${base_url}/api/event/${event_id}`)
   })
   .then(data => {
     updateEventInfo(data)
-    return fetch(`${base_url}/api/host/${data["host_id"]}`)
+    return fetch(`/api/host/${data["host_id"]}`)
   })
   .then(response => {
     if (!response.ok) {
@@ -201,7 +227,7 @@ fetch(`${base_url}/api/event/${event_id}`)
   })
   .then(data => {
     updateUserInfo(data)
-    return fetch(`${base_url}/api/time_slots/${event_id}`)
+    return fetch(`/api/time_slots/${event_id}`)
   })
   .then(response => {
     if (!response.ok) {
