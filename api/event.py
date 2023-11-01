@@ -1,5 +1,5 @@
 from app import app
-from flask import render_template, request, make_response, jsonify
+from flask import render_template, request, make_response, jsonify, redirect
 from engine import storage
 
 
@@ -31,5 +31,4 @@ def update_event_pool():
     storage.update_time_slots(data['event_id'], data['selected_slots'])
     storage.add_attendee(data['event_id'], data['attendee_name'], data['attendee_email'])
 
-    response = {"message": "data recieved"}
-    return jsonify(response)
+    return redirect('/event/submission/success')

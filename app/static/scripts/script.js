@@ -200,9 +200,8 @@ function setupEventListeners() {
         'Content-Type': 'application/json'
       },
       body: JSON.stringify(data)
-    })
-      .then((response) => {
-        console.log(response.json())
+    }).then((response) => {
+        window.location.href = response.url;
       })
   })
 }

@@ -16,6 +16,11 @@ def event_page(event_id):
 
     return response
 
+# Define a route to retrieve the success page
+@app.route('/event/submission/success')
+def success_page():
+    return render_template('success.html')
+
 @app.teardown_appcontext
 def on_app_teardown(exception=None):
     # Save data to disk here
