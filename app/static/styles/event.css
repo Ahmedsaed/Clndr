@@ -1,4 +1,17 @@
 #window {
+	background-color: white;
+	border: 1px solid var(--text-color-level3,rgba(26,26,26,0.1));
+	border-radius: 8px;
+	box-shadow: 0 1px 8px 0 rgb(0 0 0/8%);
+	/* min-width: 550px; */
+
+	width: 1000px;
+	max-width: 1000px;
+	height: 600px;
+	padding: 10px;
+
+	transition: all .22s ease-out;
+
 	display: flex;
 	flex: 1 1 auto;
 }

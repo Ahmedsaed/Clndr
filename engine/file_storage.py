@@ -80,9 +80,32 @@ class FileStorage():
                     ts['vote_count'] += 1
 
     def add_attendee(self, event_id, attendee_name, attednee_email):
+        """Add attendee to the event"""
         self.__attendee.append({
             "id": str(uuid4()),
             "name": attendee_name,
             "email": attednee_email,
             "event_id": event_id
         })
+
+    def add_user(self, username, password, email):
+        """Add user to the event and hash the password"""
+
+        password = password # hash password here
+
+        self.__host.append({
+            "id": str(uuid4()),
+            "name": username,
+            "password": password,
+            "email": email,
+            "photo_id": 2
+        })
+
+        return self.__host[-1]['id']
+
+    def get_user_id(self, username, password):
+        """Get user ID from the database"""
+        for user in self.__host:
+            if user['name'] == username and user['password'] == password:
+                return user['id']
+        return None

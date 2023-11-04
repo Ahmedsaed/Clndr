@@ -1,0 +1,190 @@
+#window {
+	background-color: white;
+
+	border: 1px solid var(--text-color-level3,rgba(26,26,26,0.1));
+	border-radius: 8px;
+	box-shadow: 0 1px 8px 0 rgb(0 0 0/8%);
+
+	/* min-width: 550px; */
+	width: 1000px;
+	max-width: 1000px;
+	height: 600px;
+	/* padding: 10px; */
+
+	transition: all .22s ease-out;
+}
+
+.window-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	height: 50px;
+}
+
+.window-header .header-tab {
+	width: 100%;
+	height: 100%;
+	padding: 5px;
+
+	background-color: rgb(0,105,255);;
+
+	border: none;
+	transition: background-color 300ms ease-out, border-color 300ms ease-out, outline 300ms ease-out;
+
+	color: white;
+	font-weight: 700;
+	font-size: 32px;
+	text-align: center;
+
+	cursor: pointer;
+	outline: 2px solid transparent;
+}
+
+.window-header .curved-tr {
+	border-radius: 8px 0px 0px 0px;
+}
+
+.window-header .curved-tl {
+	border-radius: 0px 8px 0px 0px;
+}
+
+.window-header .selected {
+	background-color: white;
+	color: rgb(0,105,255);
+}
+
+#window-body {
+	height: calc(100% - 50px);
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	/* padding: 10px; */
+}
+
+.fade {
+	opacity: 1;
+	animation: fade-in 1s ease-in-out;
+	transition: opacity 1s;
+}
+
+@keyframes fade-in {
+	0% {
+	  opacity: 0;
+	}
+	100% {
+	  opacity: 1;
+	}
+}
+
+@keyframes fade-out {
+	0% {
+	  opacity: 1;
+	}
+	100% {
+	  opacity: 0;
+	}
+}
+
+.hidden {
+	display: none !important;
+	animation: fade-out 1s ease-in-out;
+}
+
+#window-body > div > h2 {
+	font-size: 2.625rem;
+	font-weight: 700;
+	margin: 5px;
+}
+
+#window-body > div > p {
+	font-size: 1.3rem;
+	font-weight: 400;
+	text-align: center;
+	color: rgb(71, 70, 70);
+	margin: 10px 0px 20px;
+}
+
+#window-body > div > hr {
+	width: 80%;
+}
+
+#window-body > div > form {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+#window-body > div > form > div {
+	margin: 5px;
+}
+
+#window-body > div > form > div > input {
+	display: block;
+
+	margin: 0px 5px;
+	padding: 10px 14px;
+	width: 320px;
+
+	border: 1px solid #B2B2B2;
+    border-radius: 8px;
+
+	background: rgba(255,255,255,1);
+    color: #1a1a1a;
+    font-size: 16px;
+    line-height: 1.5;
+
+	overflow-wrap: normal;
+	outline: none;
+}
+
+#window-body > div > form > div > input:focus {
+	outline: 2px solid rgb(0,105,255);
+}
+
+#window-body > div > form > div > button {
+	width: 100%;
+	height: 50px;
+	margin: 10px;
+	padding: 2px 20px;
+
+	border: none;
+	border-radius: 8px;
+	box-shadow: 0 1px 8px 0 rgb(0 0 0/8%);
+
+	background-color: rgb(0,105,255);
+	color: white;
+	font-size: 1rem;
+	font-weight: 700;
+	cursor: pointer;
+}
+
+#window-body > div > form > div > button:hover {
+	background-color: rgb(0,105,255, 0.8);
+}
+
+#window-body > div > form > div > label {
+	text-align: center;
+	color: rgb(71, 70, 70);
+
+	font-weight: 700;
+	font-size: 14px;
+	margin: 5px;
+}
+
+#error {
+	background-color: rgb(226, 114, 114, 0.5);
+	border: 1px solid rgb(226, 114, 114);
+	border-radius: 8px;
+
+	padding: 20px;
+
+	color: black;
+	font-size: 18px;
+	font-weight: 700;
+	margin: 5px;
+}
