@@ -13,6 +13,7 @@ Clndr is a web application that allows users to create events and invite partici
 
 ## TODOs
 - [ ] implement dashboard to show events created by user
+	- [X] Frontend design is implemented (needs to be connected to backend)
 	- [ ] view event details
 	- [ ] view most selected time slot
 	- [ ] view event location and duration
@@ -23,6 +24,8 @@ Clndr is a web application that allows users to create events and invite partici
 	- [ ] add event duration
 	- [ ] add event time slots
 	- [ ] add event description
+- [ ] add Download button in attendee page (to download csv file of attendees)
+- [ ] Handle event duration in hours
 - [ ] Hash passwords before storing in database
 - [ ] validate password requirements
 - [ ] implement password reset
