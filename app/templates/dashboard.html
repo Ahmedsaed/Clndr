@@ -38,9 +38,92 @@
 								<div class="n-attendees">Attendees: 18 attendees</div>
 							</div>
 						</div>
-						<div class="expand"><span>▶</span>Details</div>
+						<div class="expand-btn"><span>▶</span>Details</div>
 					</div>
-					<div class="event-details">
+					<div class="event-details expand">
+						<div class="event-slots">
+							<h2 class="card-h2">Available Time Slots</h2>
+							<div id="schedule">
+								<div>
+									<div class="week-number">This Week</div>
+									<div>
+										<div class="day-info">Wednesday, November 1</div>
+										<div class="cal-btn-group">
+											<button data-object="2">
+												<div>
+													<div>
+													2:30 AM
+													</div>
+													<div>
+													20
+													</div>
+												</div>
+											</button>
+											<button data-object="1">
+												<div>
+													<div>
+													9:00 AM
+													</div>
+													<div>
+													25
+													</div>
+												</div>
+											</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="event-attendees">
+							<h2 class="card-h2">Attendees</h2>
+							<div id="attendees-list">
+								<table class="attendees-table">
+									<thead>
+										<tr>
+											<th>Name</th>
+											<th>Email</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>John Doe</td>
+											<td>johndoe@example.com</td>
+										</tr>
+										<tr>
+											<td>John Doe</td>
+											<td>johndoe@example.com</td>
+										</tr>
+										<tr>
+											<td>John Doe</td>
+											<td>johndoe@example.com</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="event-item">
+					<div class="event-card">
+						<div class="event-section">
+							<div>
+								<div class="event-name">Meeting #1</div>
+								<div class="event-info">
+									<div class="event-location">Online</div>
+									<div class="dot">•</div>
+									<div class="event-duration">30 minutes</div>
+									<div class="dot">•</div>
+									<div class="event-slot-count">18 time slots</div>
+								</div>
+							</div>
+							<div>
+								<div class="top-vote">Top Vote: date, time</div>
+								<div class="n-attendees">Attendees: 18 attendees</div>
+							</div>
+						</div>
+						<div class="expand-btn"><span>▶</span>Details</div>
+					</div>
+					<div class="event-details expand">
 						<div class="event-slots">
 							<h2 class="card-h2">Available Time Slots</h2>
 							<div id="schedule">
@@ -111,6 +194,6 @@
 		<svg id="blob2" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
 			<path fill="#0F62FE" d="M52.2,-36.3C66.7,-23.4,76.9,-1.8,74.2,19.7C71.5,41.2,55.9,62.5,35.6,71.2C15.3,79.8,-9.7,75.9,-30.4,65.2C-51.2,54.4,-67.8,36.8,-74.4,15C-80.9,-6.9,-77.5,-33,-63.4,-45.7C-49.4,-58.4,-24.7,-57.7,-2.9,-55.4C18.8,-53.1,37.7,-49.1,52.2,-36.3Z" transform="translate(100 100)" />
 		</svg>
-		<script src="{{url_for('static', filename='scripts/login.js')}}"></script>
+		<script src="{{url_for('static', filename='scripts/dashboard.js')}}"></script>
 	</body>
 </html>

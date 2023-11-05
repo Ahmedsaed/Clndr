@@ -66,8 +66,16 @@
 	justify-content: space-evenly;
 	align-items: flex-start;
 
-	height: 300px;
+	height: 0px;
+	padding: 0px;
 
+	transition: height 300ms ease;
+
+	overflow: hidden;
+}
+
+.expand {
+	height: 300px;
 	padding: 5px;
 }
 
@@ -132,7 +140,7 @@
 	align-items: flex-start;
 }
 
-.expand {
+.expand-btn {
 	margin-right: 10px;
 	font-weight: 700;
 
@@ -141,7 +149,7 @@
 	border-radius: 8px;
 }
 
-.expand > span {
+.expand-btn > span {
 	margin: 0px 5px;
 }
 
