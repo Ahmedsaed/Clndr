@@ -15,7 +15,7 @@ Clndr is a web application that allows users to create events and invite partici
 - [ ] Design and implement the landing page
 - [ ] implement dashboard to show events created by user
 	- [X] Frontend design is implemented (needs to be connected to backend)
-	- [ ] Apply rotation transition to the expand button icon
+	- [X] Apply rotation transition to the expand button icon
 	- [ ] view event details
 	- [ ] view most selected time slot
 	- [ ] view event location and duration
