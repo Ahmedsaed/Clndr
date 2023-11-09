@@ -149,8 +149,14 @@
 	border-radius: 8px;
 }
 
-.expand-btn > span {
+.expand-btn > span.icon {
 	margin: 0px 5px;
+	display: inline-block;
+	transition: transform 0.3s;
+}
+
+.expand-btn.expanded > span.icon {
+	transform: rotate(90deg);
 }
 
 .btn {

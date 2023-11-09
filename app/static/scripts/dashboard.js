@@ -7,5 +7,7 @@ expandBtns.forEach(btn => {
 		.parentNode
 		.querySelectorAll('.event-details')[0]
 		.classList.toggle('expand');
+
+		btn.classList.toggle('expanded');
 	});
 });
