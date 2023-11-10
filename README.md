@@ -35,6 +35,7 @@ Clndr is a web application that allows users to create events and invite partici
 - [ ] Update the login/register website to switch based on user actions
 	- [ ] change the page title
 	- [ ] select the correct form
+- [ ] add a favcon
 - [ ] add Download button in attendee page (to download csv file of attendees)
 - [ ] Handle event duration in hours
 - [ ] Hash passwords before storing in database
