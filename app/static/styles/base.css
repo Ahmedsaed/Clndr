@@ -2,14 +2,18 @@ body {
 	margin: 0;
 	min-height: 100vh;
 
-	display: flex;
-	justify-content: center;
-	align-items: center;
-
 	font-family: 'Roboto', sans-serif;
 	background-color: #fbfcfd;
 
 	overflow: hidden;
+}
+
+main {
+	min-height: 100vh;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 #header-title {
@@ -33,7 +37,7 @@ body {
 	z-index: -2;
 
 	width: 500px;
-	filter: blur(175px);
+	filter: blur(150px);
 }
 
 #blob2 {
@@ -44,5 +48,5 @@ body {
 	z-index: -2;
 
 	width: 500px;
-	filter: blur(175px);
+	filter: blur(150px);
 }
