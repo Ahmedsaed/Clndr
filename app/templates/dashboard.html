@@ -20,172 +20,80 @@
 				<button class="btn">Create</button>
 			</div>
 			<div id="window-body">
-				<div class="event-item">
-					<div class="event-card">
-						<div class="event-section">
-							<div>
-								<div class="event-name">Meeting #1</div>
-								<div class="event-info">
-									<div class="event-location">Online</div>
-									<div class="dot">•</div>
-									<div class="event-duration">30 minutes</div>
-									<div class="dot">•</div>
-									<div class="event-slot-count">18 time slots</div>
+				<template id="event-template">
+					<div class="event-item">
+						<div class="event-card">
+							<div class="event-section">
+								<div>
+									<div class="event-name">Meeting #1</div>
+									<div class="event-info">
+										<div class="event-location">Online</div>
+										<div class="dot">•</div>
+										<div class="event-duration">30 minutes</div>
+										<div class="dot">•</div>
+										<div class="event-slot-count">18 time slots</div>
+									</div>
+								</div>
+								<div>
+									<div class="top-vote">Top Vote: date, time</div>
+									<div class="n-attendees">Attendees: 18 attendees</div>
 								</div>
 							</div>
-							<div>
-								<div class="top-vote">Top Vote: date, time</div>
-								<div class="n-attendees">Attendees: 18 attendees</div>
-							</div>
+							<div class="expand-btn"><span class="icon">▶</span>Details</div>
 						</div>
-						<div class="expand-btn"><span class="icon">▶</span>Details</div>
-					</div>
-					<div class="event-details">
-						<div class="event-slots">
-							<h2 class="card-h2">Available Time Slots</h2>
-							<div id="schedule">
-								<div>
-									<div class="week-number">This Week</div>
+						<div class="event-details">
+							<div class="event-slots">
+								<h2 class="card-h2">Available Time Slots</h2>
+								<div id="schedule">
 									<div>
-										<div class="day-info">Wednesday, November 1</div>
-										<div class="cal-btn-group">
-											<button data-object="2">
-												<div>
+										<div class="week-number">This Week</div>
+										<div>
+											<div class="day-info">Wednesday, November 1</div>
+											<div class="cal-btn-group">
+												<button data-object="2">
 													<div>
-													2:30 AM
+														<div>
+														2:30 AM
+														</div>
+														<div>
+														20
+														</div>
 													</div>
+												</button>
+												<button data-object="1">
 													<div>
-													20
+														<div>
+														9:00 AM
+														</div>
+														<div>
+														25
+														</div>
 													</div>
-												</div>
-											</button>
-											<button data-object="1">
-												<div>
-													<div>
-													9:00 AM
-													</div>
-													<div>
-													25
-													</div>
-												</div>
-											</button>
+												</button>
+											</div>
 										</div>
 									</div>
 								</div>
 							</div>
-						</div>
-						<div class="event-attendees">
-							<h2 class="card-h2">Attendees</h2>
-							<div id="attendees-list">
-								<table class="attendees-table">
-									<thead>
-										<tr>
-											<th>Name</th>
-											<th>Email</th>
-										</tr>
-									</thead>
-									<tbody>
-										<tr>
-											<td>John Doe</td>
-											<td>johndoe@example.com</td>
-										</tr>
-										<tr>
-											<td>John Doe</td>
-											<td>johndoe@example.com</td>
-										</tr>
-										<tr>
-											<td>John Doe</td>
-											<td>johndoe@example.com</td>
-										</tr>
-									</tbody>
-								</table>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="event-item">
-					<div class="event-card">
-						<div class="event-section">
-							<div>
-								<div class="event-name">Meeting #2</div>
-								<div class="event-info">
-									<div class="event-location">Online</div>
-									<div class="dot">•</div>
-									<div class="event-duration">30 minutes</div>
-									<div class="dot">•</div>
-									<div class="event-slot-count">11 time slots</div>
-								</div>
-							</div>
-							<div>
-								<div class="top-vote">Top Vote: date, time</div>
-								<div class="n-attendees">Attendees: 15 attendees</div>
-							</div>
-						</div>
-						<div class="expand-btn"><span class="icon">▶</span>Details</div>
-					</div>
-					<div class="event-details">
-						<div class="event-slots">
-							<h2 class="card-h2">Available Time Slots</h2>
-							<div id="schedule">
-								<div>
-									<div class="week-number">This Week</div>
-									<div>
-										<div class="day-info">Wednesday, November 1</div>
-										<div class="cal-btn-group">
-											<button data-object="2">
-												<div>
-													<div>
-													2:30 AM
-													</div>
-													<div>
-													20
-													</div>
-												</div>
-											</button>
-											<button data-object="1">
-												<div>
-													<div>
-													9:00 AM
-													</div>
-													<div>
-													25
-													</div>
-												</div>
-											</button>
-										</div>
-									</div>
+							<div class="event-attendees">
+								<h2 class="card-h2">Attendees</h2>
+								<div id="attendees-list">
+									<table class="attendees-table">
+										<thead>
+											<tr>
+												<th>Name</th>
+												<th>Email</th>
+											</tr>
+										</thead>
+										<tbody>
+											
+										</tbody>
+									</table>
 								</div>
 							</div>
 						</div>
-						<div class="event-attendees">
-							<h2 class="card-h2">Attendees</h2>
-							<div id="attendees-list">
-								<table class="attendees-table">
-									<thead>
-										<tr>
-											<th>Name</th>
-											<th>Email</th>
-										</tr>
-									</thead>
-									<tbody>
-										<tr>
-											<td>John Doe</td>
-											<td>johndoe@example.com</td>
-										</tr>
-										<tr>
-											<td>John Doe</td>
-											<td>johndoe@example.com</td>
-										</tr>
-										<tr>
-											<td>John Doe</td>
-											<td>johndoe@example.com</td>
-										</tr>
-									</tbody>
-								</table>
-							</div>
-						</div>
 					</div>
-				</div>
+				</template>
 			</div>
 		</div>
 		<svg id="blob1" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">

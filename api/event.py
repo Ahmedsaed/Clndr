@@ -24,13 +24,6 @@ def get_user_details(host_id):
 
     return jsonify(data)
 
-@app.route('/api/host/events/<int:host_id>')
-def get_user_events(host_id):
-    """Define a route to retrieve details of events of user"""
-    data = storage.get_events_by_host_id(host_id)
-
-    return jsonify(data)
-
 @app.route('/api/time_slots/<int:event_id>')
 def get_time_slots(event_id):
     """Define a route to retrieve time slots available"""
