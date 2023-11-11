@@ -59,18 +59,32 @@ class FileStorage():
                 return host
         return None
 
+    def get_attendee_by_id(self, attendee_id):
+        for attendee in self.__attendee:
+            if attendee['AttendeeID'] == attendee_id:
+                return attendee
+        return None
+    
     def get_time_slots_by_event_id(self, event_id):
         valid_time_slots = []
         for time_slot in self.__time_slots:
             if time_slot['event_id'] == event_id:
                 valid_time_slots.append(time_slot)
         return valid_time_slots
-
-    def get_attendee_by_id(self, attendee_id):
+    
+    def get_attendees_by_event_id(self, event_id):
+        attendees_info = []
         for attendee in self.__attendee:
-            if attendee['AttendeeID'] == attendee_id:
-                return attendee
-        return None
+            if attendee['event_id'] == event_id:
+                attendees_info.append(attendee)
+        return attendees_info
+    
+    def get_events_by_host_id(self, host_id):
+        events_card = []
+        for event in self.__event:
+            if event['host_id'] == host_id:
+                events_card.append(event)
+        return events_card
 
     def update_time_slots(self, event_id, slots):
         """update time slots vote count based on user input"""

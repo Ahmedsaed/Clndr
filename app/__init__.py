@@ -3,7 +3,7 @@ from flask_login import LoginManager
 import os
 
 app = Flask(__name__)
-app.secret_key = os.getenv('SECRET_KEY')
+app.secret_key = os.getenv('SECRET_KEY','123456')
 
 # Initialize Flask-Login
 login_manager = LoginManager()
