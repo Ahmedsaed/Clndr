@@ -1,4 +1,5 @@
 body {
+	width: 100%;
 	margin: 0;
 	min-height: 100vh;
 
@@ -52,17 +53,14 @@ main {
 	filter: blur(150px);
 }
 
-nav {
-	position: fixed;
-	top: 50%;
-	right: 100px;
-
-	/* background-color: rgb(0,105,255, 0.7); */
-	width: 150px;
+.nav {
+	/* width: 100vw; */
+	padding: 10px;
+	/* padding-right: 500px; */
 
 	display: flex;
-	flex-direction: column;
-	justify-content: center;
+	flex-direction: row;
+	justify-content: flex-end;
 	align-items: center;
 }
 
@@ -71,13 +69,13 @@ nav {
 	text-decoration: none;
 
 	padding: 10px 20px;
-	margin: 0px 5px;
+	margin: 10px 5px;
 
-	background-color: transparent;
+	background-color: white;
 
 	border: 1px solid rgba(0,105,255,0.5);
-	border-radius: 4px;
-	transition: background-color 300ms ease-out, border-color 300ms ease-out, outline 300ms ease-out;
+	border-radius: 18px;
+	transition: background-color 300ms ease-out, border-color 300ms ease-out, outline 300ms ease-out, border-radius 300ms ease-out;
 
 	color: rgb(0,105,255);
 	font-weight: 700;
@@ -89,6 +87,7 @@ nav {
 }
 
 .btn:hover {
+	border-radius: 6px;
 	background-color: rgb(0,105,255);
 	color: white;
 	outline: 2px solid rgba(0,105,255,1);
@@ -167,6 +166,7 @@ section {
 	border-radius: 32px;
 
 	margin-bottom: 100px;
+	margin-top: 100px;
 }
 
 .feature > h2 {
@@ -208,6 +208,7 @@ section {
 	border: 5px solid rgb(0,105,255);
 
 	margin-bottom: 100px;
+	margin-top: 100px;
 }
 
 .about > h2 {
@@ -218,6 +219,10 @@ section {
 .about > h3 {
 	font-size: 40px;
 	margin: 0px;
+}
+
+.about > p {
+	font-size: 20px;
 }
 
 .member-cards {
