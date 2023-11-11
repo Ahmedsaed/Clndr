@@ -1,10 +1,88 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>Home</title>
-	</head>
-	<body>
-		<h1>Home</h1>
-		<p>Hi, {{ user_id }}!</p>
-	</body>
+<head>
+    <title>Clndr - Home</title>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="{{url_for('static', filename='styles/home.css')}}" rel="stylesheet" type="text/css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+	<div class="nav">
+		<a class="btn" href="#features">Features</a>
+		<a class="btn" href="#about">About</a>
+		<a class="btn" href="/register">Register</a>
+		<a class="btn" href="/login">Login</a>
+	</div>
+
+	<main>
+		<section id="intro" class="intro">
+			<div>
+				<img src="{{url_for('static', filename='images/home/event-scheduling.png')}}" alt="Project Cover Image">
+				<div>
+					<div id="header-title">
+						Clndr
+					</div>
+					<p class="intro-description">Meet <b>Clndr</b>, the group meeting scheduler for everyone. Focus on meeting, not making meetings. Free and open source.</p>
+					<div>
+						<p class="intro-header">Meeting</p>
+					</div>
+				</div>
+			</div>
+			<div>
+				<p class="intro-header">scheduling infrastructure for <span class="intro-header-special">everyone.</span></p> <!-- Meeting | Event | Conference ... -->
+			</div>
+		</section>
+		<div id="features"></div>
+		<section class="feature">
+			<h2>Schedule meetings <br/>without the email tennis</h2>
+			<div>
+				<div>
+					<h3>Set your availability</h3>
+					<h3>Share your link</h3>
+					<h3>Let people book when it <br/>works for both of you</h3>
+				</div>
+				<div>
+					<img src="{{url_for('static', filename='images/home/event-scheduling.png')}}" alt="Project Cover Image">
+					<!-- <img src="{{url_for('static', filename='images/home/event-scheduling.png')}}" alt="Project Cover Image"> --> <!-- Change while user scrolling -->
+				</div>
+			</div>
+		</section>
+		<div id="about"></div>
+		<section class="about">
+			<h2>About Us</h2>
+			<p>Our project, Clndr, was born out of the need to streamline and simplify the process of coordinating meetings within a team. We understand the challenges that come with scheduling group meetings efficiently, and our goal is to provide a user-friendly solution that enhances collaboration.</p>
+
+			<h3>Meet the Team</h3>
+			<div class="member-cards">
+				<div class="team-member">
+					<img src="{{url_for('static', filename='images/home/ahmed.png')}}" alt="Profile photo">
+					<h4>Ahmed Saed</h4>
+					<h5>Founder</h5>
+				</div>
+				<div class="team-member">
+					<img src="{{url_for('static', filename='images/home/adham.jpg')}}" alt="Profile photo">
+					<h4>Adham Essam</h4>
+					<h5>Founder</h5>
+				</div>
+			</div>
+			<h3>Project Repository</h3>
+			<p>
+				Explore our project's source code on GitHub:
+				<a href="https://github.com/Ahmedsaed/Clndr" target="_blank">GitHub Repository</a>
+			</p>
+		</section>
+	</main>
+	<svg id="blob1" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+		<path fill="#0F62FE" d="M52.2,-36.3C66.7,-23.4,76.9,-1.8,74.2,19.7C71.5,41.2,55.9,62.5,35.6,71.2C15.3,79.8,-9.7,75.9,-30.4,65.2C-51.2,54.4,-67.8,36.8,-74.4,15C-80.9,-6.9,-77.5,-33,-63.4,-45.7C-49.4,-58.4,-24.7,-57.7,-2.9,-55.4C18.8,-53.1,37.7,-49.1,52.2,-36.3Z" transform="translate(100 100)" />
+	</svg>
+	<svg id="blob2" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+		<path fill="#0F62FE" d="M52.2,-36.3C66.7,-23.4,76.9,-1.8,74.2,19.7C71.5,41.2,55.9,62.5,35.6,71.2C15.3,79.8,-9.7,75.9,-30.4,65.2C-51.2,54.4,-67.8,36.8,-74.4,15C-80.9,-6.9,-77.5,-33,-63.4,-45.7C-49.4,-58.4,-24.7,-57.7,-2.9,-55.4C18.8,-53.1,37.7,-49.1,52.2,-36.3Z" transform="translate(100 100)" />
+	</svg>
+	<svg id="blob3" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+		<path fill="#0F62FE" d="M52.2,-36.3C66.7,-23.4,76.9,-1.8,74.2,19.7C71.5,41.2,55.9,62.5,35.6,71.2C15.3,79.8,-9.7,75.9,-30.4,65.2C-51.2,54.4,-67.8,36.8,-74.4,15C-80.9,-6.9,-77.5,-33,-63.4,-45.7C-49.4,-58.4,-24.7,-57.7,-2.9,-55.4C18.8,-53.1,37.7,-49.1,52.2,-36.3Z" transform="translate(100 100)" />
+	</svg>
+</body>
 </html>
