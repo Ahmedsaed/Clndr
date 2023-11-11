@@ -12,10 +12,10 @@ Clndr is a web application that allows users to create events and invite partici
 4. open `http://localhost:5000/` in your browser
 
 ## TODOs
-- [ ] Design and implement the landing page
+- [X] Design and implement the landing page
 	- [ ] update `Meeting` Word with other words (e.g. Event, Gathering, etc.) in a smooth transition
 	- [ ] shuffle through project pictures in feature section
-	- [ ] add a floating navigation bar
+	- [X] add a navigation bar
 - [X] implement dashboard to show events created by user
 	- [X] Frontend design is implemented (needs to be connected to backend)
 	- [X] Apply rotation transition to the expand button icon
