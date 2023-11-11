@@ -10,6 +10,13 @@ def get_event_details(event_id):
 
     return jsonify(data)
 
+@app.route('/api/event/attendees/<int:host_id>')
+def get_event_attendees(event_id):
+    """Define a route to retrieve details of attendees of events"""
+    data = storage.get_attendees_by_event_id(event_id)
+
+    return jsonify(data)
+
 @app.route('/api/host/<int:host_id>')
 def get_user_details(host_id):
     """Define a route to retrieve user details"""
@@ -23,6 +30,7 @@ def get_time_slots(event_id):
     data = storage.get_time_slots_by_event_id(event_id)
 
     return jsonify(data)
+
 
 @app.route("/api/event/submission", methods=["POST"])
 def update_event_pool():

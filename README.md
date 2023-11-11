@@ -16,13 +16,13 @@ Clndr is a web application that allows users to create events and invite partici
 	- [ ] update `Meeting` Word with other words (e.g. Event, Gathering, etc.) in a smooth transition
 	- [ ] shuffle through project pictures in feature section
 	- [ ] add a floating navigation bar
-- [ ] implement dashboard to show events created by user
+- [X] implement dashboard to show events created by user
 	- [X] Frontend design is implemented (needs to be connected to backend)
 	- [X] Apply rotation transition to the expand button icon
-	- [ ] view event details
-	- [ ] view most selected time slot
-	- [ ] view event location and duration
-	- [ ] expand the event to view all time slots and participants
+	- [X] view event details
+	- [X] view most selected time slot
+	- [X] view event location and duration
+	- [X] expand the event to view all time slots and participants
 - [ ] implement event creation page
 	- [ ] add event name
 	- [ ] add event location
@@ -38,6 +38,7 @@ Clndr is a web application that allows users to create events and invite partici
 - [ ] Update the login/register website to switch based on user actions
 	- [ ] change the page title
 	- [ ] select the correct form
+- [ ] add a favcon
 - [ ] add Download button in attendee page (to download csv file of attendees)
 - [ ] Handle event duration in hours
 - [ ] Hash passwords before storing in database
