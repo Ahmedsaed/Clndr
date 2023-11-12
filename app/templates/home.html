@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <title>Clndr - Home</title>
+	<title>Clndr - Home</title>
 	<meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href="{{url_for('static', filename='styles/home.css')}}" rel="stylesheet" type="text/css">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 </head>
+
 <body>
 	<div class="nav">
 		<a class="btn" href="#features">Features</a>
@@ -25,35 +27,45 @@
 					<div id="header-title">
 						Clndr
 					</div>
-					<p class="intro-description">Meet <b>Clndr</b>, the group meeting scheduler for everyone. Focus on meeting, not making meetings. Free and open source.</p>
+					<p class="intro-description">Meet <b>Clndr</b>, the group meeting scheduler for everyone. Focus on
+						meeting, not making meetings. Free and open source.</p>
 					<div>
-						<p class="intro-header">Meeting</p>
+						<p class="intro-header">
+							<span class="header-word fade">Meeting</span>
+							<span class="header-word fade hidden">Gathering</span>
+							<span class="header-word fade hidden">Event</span>
+						</p>
 					</div>
 				</div>
 			</div>
 			<div>
-				<p class="intro-header">scheduling infrastructure for <span class="intro-header-special">everyone.</span></p> <!-- Meeting | Event | Conference ... -->
+				<p class="intro-header">scheduling infrastructure for <span
+						class="intro-header-special">everyone.</span></p> <!-- Meeting | Event | Conference ... -->
 			</div>
 		</section>
 		<div id="features"></div>
 		<section class="feature">
-			<h2>Schedule meetings <br/>without the email tennis</h2>
+			<h2>Schedule meetings <br />without the email tennis</h2>
 			<div>
 				<div>
 					<h3>Set your availability</h3>
 					<h3>Share your link</h3>
-					<h3>Let people book when it <br/>works for both of you</h3>
+					<h3>Let people book when it <br />works for both of you</h3>
 				</div>
 				<div>
-					<img src="{{url_for('static', filename='images/home/event-scheduling.png')}}" alt="Project Cover Image">
-					<!-- <img src="{{url_for('static', filename='images/home/event-scheduling.png')}}" alt="Project Cover Image"> --> <!-- Change while user scrolling -->
+					<img src="{{url_for('static', filename='images/home/event-scheduling.png')}}"
+						alt="Project Cover Image">
+					<!-- <img src="{{url_for('static', filename='images/home/event-scheduling.png')}}" alt="Project Cover Image"> -->
+					<!-- Change while user scrolling -->
 				</div>
 			</div>
 		</section>
 		<div id="about"></div>
 		<section class="about">
 			<h2>About Us</h2>
-			<p>Our project, Clndr, was born out of the need to streamline and simplify the process of coordinating meetings within a team. We understand the challenges that come with scheduling group meetings efficiently, and our goal is to provide a user-friendly solution that enhances collaboration.</p>
+			<p>Our project, Clndr, was born out of the need to streamline and simplify the process of coordinating
+				meetings within a team. We understand the challenges that come with scheduling group meetings
+				efficiently, and our goal is to provide a user-friendly solution that enhances collaboration.</p>
 
 			<h3>Meet the Team</h3>
 			<div class="member-cards">
@@ -70,19 +82,55 @@
 			</div>
 			<h3>Project Repository</h3>
 			<p>
-				Explore our project's source code on GitHub:
-				<a href="https://github.com/Ahmedsaed/Clndr" target="_blank">GitHub Repository</a>
+				<a href="https://github.com/Ahmedsaed/Clndr" target="_blank">
+					<img src="https://github-readme-stats.vercel.app/api/pin/?username=Ahmedsaed&repo=clndr&theme=noctis_minimus&show_icons=true&border_radius=8&show_owner=true" alt="GitHub Repo" />
+				</a>
 			</p>
 		</section>
 	</main>
-	<svg id="blob1" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-		<path fill="#0F62FE" d="M52.2,-36.3C66.7,-23.4,76.9,-1.8,74.2,19.7C71.5,41.2,55.9,62.5,35.6,71.2C15.3,79.8,-9.7,75.9,-30.4,65.2C-51.2,54.4,-67.8,36.8,-74.4,15C-80.9,-6.9,-77.5,-33,-63.4,-45.7C-49.4,-58.4,-24.7,-57.7,-2.9,-55.4C18.8,-53.1,37.7,-49.1,52.2,-36.3Z" transform="translate(100 100)" />
+	<svg id="blob1" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" id="blobSvg"
+		filter="blur(20px)" style="opacity: 1;">
+		<path id="blob" fill="url(#gradient)" style="opacity: 1;">
+			<animate attributeName="d" dur="10000ms" repeatCount="indefinite"
+				values="M440.5,320.5Q418,391,355.5,442.5Q293,494,226,450.5Q159,407,99,367Q39,327,31.5,247.5Q24,168,89,125.5Q154,83,219.5,68Q285,53,335.5,94.5Q386,136,424.5,193Q463,250,440.5,320.5Z;M453.78747,319.98894Q416.97789,389.97789,353.96683,436.87838Q290.95577,483.77887,223.95577,447.43366Q156.95577,411.08845,105.64373,365.97789Q54.33169,320.86732,62.67444,252.61056Q71.01719,184.3538,113.01965,135.21007Q155.02211,86.06634,220.52211,66.46683Q286.02211,46.86732,335.5,91.94472Q384.97789,137.02211,437.78747,193.51106Q490.59704,250,453.78747,319.98894Z;M411.39826,313.90633Q402.59677,377.81265,342.92059,407.63957Q283.24442,437.46649,215.13648,432.5428Q147.02853,427.61911,82.23325,380.9572Q17.43796,334.29529,20.45223,250.83809Q23.46649,167.38089,82.5856,115.05707Q141.70471,62.73325,212.19045,63.73015Q282.67618,64.72705,352.67308,84.79839Q422.66998,104.86972,421.43486,177.43486Q420.19974,250,411.39826,313.90633Z;M440.5,320.5Q418,391,355.5,442.5Q293,494,226,450.5Q159,407,99,367Q39,327,31.5,247.5Q24,168,89,125.5Q154,83,219.5,68Q285,53,335.5,94.5Q386,136,424.5,193Q463,250,440.5,320.5Z;">
+			</animate>
+		</path>
+		<defs>
+			<linearGradient id="gradient" x1="50%" y1="0%" x2="50%" y2="100%">
+				<stop offset="0%" style="stop-color: rgb(0, 100, 255);"></stop>
+				<stop offset="100%" style="stop-color: rgb(0, 100, 255);"></stop>
+			</linearGradient>
+		</defs>
 	</svg>
-	<svg id="blob2" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-		<path fill="#0F62FE" d="M52.2,-36.3C66.7,-23.4,76.9,-1.8,74.2,19.7C71.5,41.2,55.9,62.5,35.6,71.2C15.3,79.8,-9.7,75.9,-30.4,65.2C-51.2,54.4,-67.8,36.8,-74.4,15C-80.9,-6.9,-77.5,-33,-63.4,-45.7C-49.4,-58.4,-24.7,-57.7,-2.9,-55.4C18.8,-53.1,37.7,-49.1,52.2,-36.3Z" transform="translate(100 100)" />
+	<svg id="blob2" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" id="blobSvg"
+		filter="blur(20px)" style="opacity: 1;">
+		<path id="blob" fill="url(#gradient)" style="opacity: 1;">
+			<animate attributeName="d" dur="10000ms" repeatCount="indefinite"
+				values="M440.5,320.5Q418,391,355.5,442.5Q293,494,226,450.5Q159,407,99,367Q39,327,31.5,247.5Q24,168,89,125.5Q154,83,219.5,68Q285,53,335.5,94.5Q386,136,424.5,193Q463,250,440.5,320.5Z;M453.78747,319.98894Q416.97789,389.97789,353.96683,436.87838Q290.95577,483.77887,223.95577,447.43366Q156.95577,411.08845,105.64373,365.97789Q54.33169,320.86732,62.67444,252.61056Q71.01719,184.3538,113.01965,135.21007Q155.02211,86.06634,220.52211,66.46683Q286.02211,46.86732,335.5,91.94472Q384.97789,137.02211,437.78747,193.51106Q490.59704,250,453.78747,319.98894Z;M411.39826,313.90633Q402.59677,377.81265,342.92059,407.63957Q283.24442,437.46649,215.13648,432.5428Q147.02853,427.61911,82.23325,380.9572Q17.43796,334.29529,20.45223,250.83809Q23.46649,167.38089,82.5856,115.05707Q141.70471,62.73325,212.19045,63.73015Q282.67618,64.72705,352.67308,84.79839Q422.66998,104.86972,421.43486,177.43486Q420.19974,250,411.39826,313.90633Z;M440.5,320.5Q418,391,355.5,442.5Q293,494,226,450.5Q159,407,99,367Q39,327,31.5,247.5Q24,168,89,125.5Q154,83,219.5,68Q285,53,335.5,94.5Q386,136,424.5,193Q463,250,440.5,320.5Z;">
+			</animate>
+		</path>
+		<defs>
+			<linearGradient id="gradient" x1="50%" y1="0%" x2="50%" y2="100%">
+				<stop offset="0%" style="stop-color: rgb(0, 100, 255);"></stop>
+				<stop offset="100%" style="stop-color: rgb(0, 100, 255);"></stop>
+			</linearGradient>
+		</defs>
 	</svg>
-	<svg id="blob3" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-		<path fill="#0F62FE" d="M52.2,-36.3C66.7,-23.4,76.9,-1.8,74.2,19.7C71.5,41.2,55.9,62.5,35.6,71.2C15.3,79.8,-9.7,75.9,-30.4,65.2C-51.2,54.4,-67.8,36.8,-74.4,15C-80.9,-6.9,-77.5,-33,-63.4,-45.7C-49.4,-58.4,-24.7,-57.7,-2.9,-55.4C18.8,-53.1,37.7,-49.1,52.2,-36.3Z" transform="translate(100 100)" />
+	<svg id="blob3" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" id="blobSvg"
+		filter="blur(20px)" style="opacity: 1;">
+		<path id="blob" fill="url(#gradient)" style="opacity: 1;">
+			<animate attributeName="d" dur="10000ms" repeatCount="indefinite"
+				values="M440.5,320.5Q418,391,355.5,442.5Q293,494,226,450.5Q159,407,99,367Q39,327,31.5,247.5Q24,168,89,125.5Q154,83,219.5,68Q285,53,335.5,94.5Q386,136,424.5,193Q463,250,440.5,320.5Z;M453.78747,319.98894Q416.97789,389.97789,353.96683,436.87838Q290.95577,483.77887,223.95577,447.43366Q156.95577,411.08845,105.64373,365.97789Q54.33169,320.86732,62.67444,252.61056Q71.01719,184.3538,113.01965,135.21007Q155.02211,86.06634,220.52211,66.46683Q286.02211,46.86732,335.5,91.94472Q384.97789,137.02211,437.78747,193.51106Q490.59704,250,453.78747,319.98894Z;M411.39826,313.90633Q402.59677,377.81265,342.92059,407.63957Q283.24442,437.46649,215.13648,432.5428Q147.02853,427.61911,82.23325,380.9572Q17.43796,334.29529,20.45223,250.83809Q23.46649,167.38089,82.5856,115.05707Q141.70471,62.73325,212.19045,63.73015Q282.67618,64.72705,352.67308,84.79839Q422.66998,104.86972,421.43486,177.43486Q420.19974,250,411.39826,313.90633Z;M440.5,320.5Q418,391,355.5,442.5Q293,494,226,450.5Q159,407,99,367Q39,327,31.5,247.5Q24,168,89,125.5Q154,83,219.5,68Q285,53,335.5,94.5Q386,136,424.5,193Q463,250,440.5,320.5Z;">
+			</animate>
+		</path>
+		<defs>
+			<linearGradient id="gradient" x1="50%" y1="0%" x2="50%" y2="100%">
+				<stop offset="0%" style="stop-color: rgb(0, 100, 255);"></stop>
+				<stop offset="100%" style="stop-color: rgb(0, 100, 255);"></stop>
+			</linearGradient>
+		</defs>
 	</svg>
+	<script src="{{url_for('static', filename='scripts/home.js')}}"></script>
 </body>
+
 </html>
