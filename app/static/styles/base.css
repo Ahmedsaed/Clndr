@@ -55,6 +55,54 @@ main {
 	filter: blur(150px);
 }
 
+.nav {
+	position: absolute;
+	top: 0px;
+	right: 0px;
+
+	padding-top: 10px;
+	padding-right: 20px;
+
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+}
+
+.nav-btn {
+	display: block;
+	text-decoration: none;
+
+	padding: 10px 20px;
+	margin: 10px 5px;
+
+	background-color: white;
+
+	border: 1px solid rgba(0,105,255,0.5);
+	border-radius: 40px;
+	transition: background-color 300ms ease-out, border-color 300ms ease-out, outline 300ms ease-out, border-radius 300ms ease-out;
+
+	color: rgb(0,105,255);
+	font-weight: 700;
+	font-size: 16px;
+	text-align: center;
+
+	cursor: pointer;
+	outline: 2px solid transparent;
+}
+
+.nav-btn:hover {
+	border-radius: 6px;
+	background-color: rgb(0,105,255);
+	color: white;
+	outline: 2px solid rgba(0,105,255,1);
+}
+
+.nav-btn.clicked {
+	border-color: rgb(0,105,255);
+	background-color: rgb(0,105,255);
+	color: white;
+}
+
 @media screen and (prefers-reduced-motion: reduce) {
 	html {
 		scroll-behavior: auto;

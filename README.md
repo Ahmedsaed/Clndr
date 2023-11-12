@@ -13,7 +13,7 @@ Clndr is a web application that allows users to create events and invite partici
 
 ## TODOs
 - [X] Design and implement the landing page
-	- [ ] update `Meeting` Word with other words (e.g. Event, Gathering, etc.) in a smooth transition
+	- [X] update `Meeting` Word with other words (e.g. Event, Gathering, etc.) in a smooth transition
 	- [ ] shuffle through project pictures in feature section
 	- [X] add a navigation bar
 - [X] implement dashboard to show events created by user
@@ -29,10 +29,10 @@ Clndr is a web application that allows users to create events and invite partici
 	- [ ] add event duration
 	- [ ] add event time slots
 	- [ ] add event description
-- [ ] Refactor html templates to use jinja2 inheritance
+- [X] Refactor html templates to use jinja2 inheritance
 	- [X] create base template (header, footer, etc.)
 	- [X] update child templates for each page
-	- [ ] add logout and navigation buttons to the header in base template
+	- [X] add logout and navigation buttons to the header in base template
 - [ ] add the ability to upload user profile picture in registration page
 	- [ ] update storage and api to handle profile pictures
 - [ ] Update the login/register website to switch based on user actions
