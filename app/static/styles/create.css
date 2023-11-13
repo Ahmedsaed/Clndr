@@ -1,0 +1,207 @@
+#window {
+	background-color: white;
+
+	border: 1px solid var(--text-color-level3,rgba(26,26,26,0.1));
+	border-radius: 8px;
+	box-shadow: 0 1px 8px 0 rgb(0 0 0/8%);
+
+	/* min-width: 550px; */
+	width: 1000px;
+	max-width: 1000px;
+	height: 600px;
+	/* padding: 10px; */
+
+	transition: all .22s ease-out;
+}
+
+.window-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 5px 10px;
+
+	height: 50px;
+}
+
+.window-header > p {
+	font-size: 34px;
+	font-weight: 700;
+	margin: 5px;
+	color: rgb(0,105,255);
+}
+
+#window-body {
+	padding: 5px;
+	height: calc(100% - 50px - 10px - 10px - 10px);
+	overflow: hidden;
+
+	border-radius: 8px;
+}
+
+.btn {
+	width: 100px;
+	padding: 10px 20px;
+
+	display: inline-block;
+	text-decoration: none;
+
+	border: 1px solid rgba(0,105,255,0.5);
+	border-radius: 4px;
+	transition: background-color 300ms ease-out, border-color 300ms ease-out, outline 300ms ease-out;
+
+	background-color: white;
+	color: rgb(0,105,255);
+	font-weight: 700;
+	font-size: 16px;
+	text-align: center;
+
+	cursor: pointer;
+	outline: 2px solid transparent;
+}
+
+.btn:hover {
+	background-color: rgb(0,105,255);
+	color: white;
+	outline: 2px solid rgba(0,105,255,1);
+}
+
+.btn.clicked {
+	border-color: rgb(0,105,255);
+	background-color: rgb(0,105,255);
+	color: white;
+}
+
+form {
+	height: 520px;
+
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: flex-start;
+}
+
+form > div {
+	height: 100%;
+	width: 100%;
+	margin: 5px;
+}
+
+input, textarea {
+	display: block;
+
+	margin: 0px 0px 10px;
+	padding: 10px 5px;
+	width: calc(100% - 10px);
+
+	border: 1px solid #B2B2B2;
+    border-radius: 8px;
+
+	background: rgba(255,255,255,1);
+    color: #1a1a1a;
+    font-size: 16px;
+    line-height: 1.5;
+
+	overflow-wrap: normal;
+	outline: none;
+
+	resize: vertical;
+}
+
+.full-height {
+	height: calc(100% - (65px * 4));
+	box-sizing: border-box;
+}
+
+textarea {
+	box-sizing: border-box;
+	width: 100%;
+	height: 100%;
+}
+
+input:focus {
+	outline: 2px solid rgb(0,105,255);
+}
+
+label {
+	text-align: center;
+	color: rgb(71, 70, 70);
+
+	font-weight: 700;
+	font-size: 14px;
+	margin: 5px;
+}
+
+#event-slost {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+#event-slost > input {
+	margin: 0px 2px;
+	width: 100%;
+}
+
+#event-slost > button {
+	padding: 12px 20px;
+	margin-left: 2px;
+
+	border-color: rgb(0,105,255);
+	background-color: rgb(0,105,255);
+	color: white;
+}
+
+#event-slost > button:hover {
+	background-color: white;
+	color: rgb(0,105,255);
+}
+
+.selected-slots {
+	height: calc(100% - 100px);
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+}
+
+.selected-slots > h3 {
+	margin: 0px 0px 5px;
+}
+
+#week-number {
+	color: gray;
+	font-weight: bold;
+}
+
+#day-info {
+	margin: 5px 0px;
+	font-weight: bold;
+}
+
+#cal-btn-group {
+	margin-bottom: 10px;
+	padding: 5px;
+}
+
+#cal-btn-group > button {
+	margin: 0 12px 8px 0;
+	width: 150px;
+	height: 40px;
+
+	background-color: transparent;
+
+	border: 1px solid rgba(0,105,255,0.5);
+	border-radius: 4px;
+	transition: background-color 300ms ease-out, border-color 300ms ease-out, outline 300ms ease-out;
+
+	color: rgb(0,105,255);
+	font-weight: 700;
+	font-size: 16px;
+	text-align: left;
+
+	outline: 2px solid transparent;
+}
+
+#schedule {
+	overflow: auto;
+}
