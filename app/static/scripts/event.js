@@ -20,7 +20,7 @@ function updateUserInfo(data) {
   let [host_photo, host_name] = document.getElementById("user-info").children
 
   host_name.textContent = data["name"]
-  host_photo.src = `${base_url}/static/images/${data["photo_id"]}.png`
+  host_photo.src = `${base_url}/static/images/host/${data["photo_id"]}.png`
 }
 
 // Function called when a time-slot is clicked

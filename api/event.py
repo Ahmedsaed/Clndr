@@ -3,7 +3,7 @@ from flask import render_template, request, make_response, jsonify, redirect
 from engine import storage
 
 
-@app.route('/api/event/<int:event_id>')
+@app.route('/api/event/<event_id>')
 def get_event_details(event_id):
     """Define a route to retrieve event details"""
     data = storage.get_event_by_id(event_id)
@@ -17,14 +17,16 @@ def get_event_attendees(event_id):
 
     return jsonify(data)
 
-@app.route('/api/host/<int:host_id>')
+@app.route('/api/host/<host_id>')
 def get_user_details(host_id):
     """Define a route to retrieve user details"""
     data = storage.get_host_by_id(host_id)
 
+    print(data)
+
     return jsonify(data)
 
-@app.route('/api/time_slots/<int:event_id>')
+@app.route('/api/time_slots/<event_id>')
 def get_time_slots(event_id):
     """Define a route to retrieve time slots available"""
     data = storage.get_time_slots_by_event_id(event_id)

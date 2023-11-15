@@ -122,6 +122,7 @@ function updateEventInfo(events) {
 
 		const eventItem = template.content.cloneNode(true).querySelector(".event-item");
 
+    eventItem.dataset.object = `${event.id}`
 		eventItem.querySelector(".event-name").textContent = event.name;
 		eventItem.querySelector(".event-location").textContent = event.location;
 		eventItem.querySelector(".event-duration").textContent = event.duration + " minutes";
@@ -164,6 +165,16 @@ function addClickHandler() {
 			btn.classList.toggle('expanded');
 		});
 	});
+
+  const copyBtns = document.querySelectorAll('.copy-btn');
+  copyBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const eventItem = btn.closest('.event-item');
+      const eventID = eventItem.dataset.object;
+      const url = `${window.location.origin}/event/${eventID}`;
+      navigator.clipboard.writeText(url);
+    });
+  });
 }
 
 fetch(`/api/host/events`)
