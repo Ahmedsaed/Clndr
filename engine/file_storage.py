@@ -52,7 +52,6 @@ class FileStorage():
     # read different data-types
     def get_event_by_id(self, event_id):
         for event in self.__event:
-            print(event['id'], event_id, event['id'] == event_id)
             if str(event['id']) == event_id:
                 return event
         return None
@@ -94,7 +93,7 @@ class FileStorage():
         """update time slots vote count based on user input"""
         for slot in slots:
             for ts in self.__time_slots:
-                if ts['id'] == int(slot):
+                if ts['id'] == slot:
                     ts['vote_count'] += 1
 
     def add_attendee(self, event_id, attendee_name, attednee_email):
