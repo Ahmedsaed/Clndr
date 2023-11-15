@@ -74,15 +74,15 @@ def dashboard_page():
 def create_event():
     if request.method == 'POST':
         # Retrieve form data
-        print(request.form)
-        title = request.form['title']
-        description = request.form['description']
-        date = request.form['date']
-        time = request.form['time']
-        location = request.form['location']
+        data = request.get_json()
 
         # Perform validation and store user data in the database
-        event_id = storage.add_event(title, description, date, time, location)
+        storage.add_event(data['title'],
+                                     data['description'],
+                                     data['duration'],
+                                     data['location'],
+                                     data["slots"],
+                                     current_user.id)
 
         return redirect('/dashboard')
 

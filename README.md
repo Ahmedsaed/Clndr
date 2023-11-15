@@ -23,13 +23,14 @@ Clndr is a web application that allows users to create events and invite partici
 	- [X] view most selected time slot
 	- [X] view event location and duration
 	- [X] expand the event to view all time slots and participants
-- [ ] implement event creation page
-	- [ ] add event name
-	- [ ] add event location
-	- [ ] add event duration
-	- [ ] add event time slots
-	- [ ] add event description
+- [X] implement event creation page
+	- [X] add event name
+	- [X] add event location
+	- [X] add event duration
+	- [X] add event time slots
+	- [X] add event description
 	- [ ] add remove button to each time slot
+	- [ ] validate each time slot before adding it (duration and duplication)
 - [X] Refactor html templates to use jinja2 inheritance
 	- [X] create base template (header, footer, etc.)
 	- [X] update child templates for each page

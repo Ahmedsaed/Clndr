@@ -3,70 +3,12 @@ document.getElementById('create-form').addEventListener('submit', function(e) {
 });
 
 let selected_slots = [
-	{
-		"date": "13/11/2023",
-		"time": "16:00",
-	},
-	{
-		"date": "13/11/2023",
-		"time": "17:00",
-	},
-	{
-		"date": "14/11/2023",
-		"time": "16:00",
-	},
-	{
-		"date": "14/11/2023",
-		"time": "17:00",
-	},
-	{
-		"date": "15/11/2023",
-		"time": "3:00",
-	},
-	{
-		"date": "13/11/2023",
-		"time": "16:00",
-	},
-	{
-		"date": "13/11/2023",
-		"time": "17:00",
-	},
-	{
-		"date": "14/11/2023",
-		"time": "16:00",
-	},
-	{
-		"date": "14/11/2023",
-		"time": "17:00",
-	},
-	{
-		"date": "15/11/2023",
-		"time": "3:00",
-	},
-	{
-		"date": "13/11/2023",
-		"time": "16:00",
-	},
-	{
-		"date": "13/11/2023",
-		"time": "17:00",
-	},
-	{
-		"date": "14/11/2023",
-		"time": "16:00",
-	},
-	{
-		"date": "14/11/2023",
-		"time": "17:00",
-	},
-	{
-		"date": "15/11/2023",
-		"time": "3:00",
-	}
+
 ];
 
 function updateScheduleInfo(data) {
 	let schedule = document.getElementById("schedule");
+	schedule.innerHTML = "";
 
 	// Function to format the date as "Saturday, October 28" based on input format
 	function formatDate(inputDate) {
@@ -110,7 +52,8 @@ function updateScheduleInfo(data) {
 	}
 
 	// Parse the response data into an object grouped by day and week
-	const timeSlotsByDayAndWeek = data.reduce((acc, slot) => {
+	const timeSlotsByDayAndWeek = data.reduce((acc, OrginalSlot) => {
+	  const slot = { ...OrginalSlot };
 	  const day = slot.date;
 	  const weekLabel = getWeekLabel(slot.date);
 
@@ -181,4 +124,47 @@ function updateScheduleInfo(data) {
 	}
 }
 
-updateScheduleInfo(selected_slots);
+function addSlot() {
+	let date = document.getElementById("event-slots-date").value;
+	let time = document.getElementById("event-slots-time").value;
+
+	date = date.split("-").reverse().join("/");
+
+	if (date && time) {
+		let slot = {
+			"date": date,
+			"time": time
+		};
+
+		selected_slots.push(slot);
+		updateScheduleInfo(selected_slots);
+	}
+}
+
+function submitForm() {
+	let name = document.getElementById("event-title").value;
+	let description = document.getElementById("event-description").value;
+	let location = document.getElementById("event-location").value;
+	let duration = document.getElementById("event-duration").value;
+	let slots = selected_slots;
+
+	let data = {
+		"title": name,
+		"description": description,
+		"duration": duration,
+		"location": location,
+		"slots": slots
+	};
+
+	console.log(data);
+
+	fetch("/create", {
+		method: "POST",
+		headers: {
+			"Content-Type": "application/json"
+		},
+		body: JSON.stringify(data),
+	}).then((response) => {
+		window.location.href = response.url;
+	});
+}
