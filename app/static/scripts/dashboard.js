@@ -119,9 +119,9 @@ function updateScheduleInfo(data, schedule) {
 function updateEventInfo(events) {
 	for(const event of events) {
 		const template = document.getElementById("event-template");
-		
+
 		const eventItem = template.content.cloneNode(true).querySelector(".event-item");
-	
+
 		eventItem.querySelector(".event-name").textContent = event.name;
 		eventItem.querySelector(".event-location").textContent = event.location;
 		eventItem.querySelector(".event-duration").textContent = event.duration + " minutes";
@@ -138,7 +138,7 @@ function updateEventInfo(events) {
 		updateScheduleInfo(event["time_slots"], schedule);
 
 		const attendeesList = eventItem.querySelector("#attendees-list");
-		
+
 		event.attendees.forEach(attendee => {
 			const attendeeRow = document.createElement("tr");
 			const nameCell = document.createElement("td");
@@ -174,7 +174,6 @@ fetch(`/api/host/events`)
 		return response.json();
 	})
 	.then(function (data) {
-		console.log(data);
 		updateEventInfo(data);
 		addClickHandler();
 	})
