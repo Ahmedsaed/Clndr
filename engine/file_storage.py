@@ -52,7 +52,8 @@ class FileStorage():
     # read different data-types
     def get_event_by_id(self, event_id):
         for event in self.__event:
-            if event['id'] == event_id:
+            print(event['id'], event_id, event['id'] == event_id)
+            if str(event['id']) == event_id:
                 return event
         return None
 
@@ -71,7 +72,7 @@ class FileStorage():
     def get_time_slots_by_event_id(self, event_id):
         valid_time_slots = []
         for time_slot in self.__time_slots:
-            if time_slot['event_id'] == event_id:
+            if str(time_slot['event_id']) == event_id:
                 valid_time_slots.append(time_slot)
         return valid_time_slots
 
