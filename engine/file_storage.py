@@ -1,6 +1,8 @@
 # Module that grabs any data-type stored by ID
-import json, os
+import json
+import os
 from uuid import uuid4
+
 
 class FileStorage():
     """File Storage Class"""
@@ -24,7 +26,7 @@ class FileStorage():
             with open(file_path, 'r') as file:
                 data = json.load(file)
                 return data
-        except(FileNotFoundError, json.JSONDecodeError) as e:
+        except (FileNotFoundError, json.JSONDecodeError) as e:
             print(f'Error reading {filename}: {str(e)}')
             return None
 
@@ -38,10 +40,11 @@ class FileStorage():
 
         for data, filename in files:
             try:
-                file_path = os.path.join(os.getcwd(), 'storage', 'json', filename)
+                file_path = os.path.join(
+                    os.getcwd(), 'storage', 'json', filename)
                 with open(file_path, 'w') as file:
                     json.dump(data, file)
-            except(FileNotFoundError, json.JSONDecodeError) as e:
+            except (FileNotFoundError, json.JSONDecodeError) as e:
                 print(f'Error writing to {filename}: {str(e)}')
 
         return None
@@ -64,21 +67,21 @@ class FileStorage():
             if attendee['AttendeeID'] == attendee_id:
                 return attendee
         return None
-    
+
     def get_time_slots_by_event_id(self, event_id):
         valid_time_slots = []
         for time_slot in self.__time_slots:
             if time_slot['event_id'] == event_id:
                 valid_time_slots.append(time_slot)
         return valid_time_slots
-    
+
     def get_attendees_by_event_id(self, event_id):
         attendees_info = []
         for attendee in self.__attendee:
             if attendee['event_id'] == event_id:
                 attendees_info.append(attendee)
         return attendees_info
-    
+
     def get_events_by_host_id(self, host_id):
         events_card = []
         for event in self.__event:
@@ -105,7 +108,7 @@ class FileStorage():
     def add_user(self, username, password, email):
         """Add user to the event and hash the password"""
 
-        password = password # hash password here
+        password = password  # hash password here
 
         self.__host.append({
             "id": str(uuid4()),
@@ -123,3 +126,29 @@ class FileStorage():
             if user['name'] == username and user['password'] == password:
                 return user['id']
         return None
+
+    def add_event(self,
+                  title,
+                  description,
+                  duration,
+                  location,
+                  slots,
+                  host_id):
+        """Add event to the database"""
+        self.__event.append({
+            "id": str(uuid4()),
+            "name": title,
+            "description": description,
+            "duration": duration,
+            "location": location,
+            "host_id": host_id
+        })
+
+        for slot in slots:
+            self.__time_slots.append({
+                "id": str(uuid4()),
+                "event_id": self.__event[-1]['id'],
+                "date": slot['date'],
+                "time": slot['time'],
+                "vote_count": 0
+            })

@@ -9,12 +9,12 @@ from engine import storage
 def get_detailed_user_events():
     user_id = current_user.id
 
-    events = storage.get_events_by_host_id(user_id)
-   
+    events = storage.get_events_by_host_id(user_id).copy()
+
     detailed_events = []
     for event in events:
-        time_slots = storage.get_time_slots_by_event_id(event['id'])
-        attendees = storage.get_attendees_by_event_id(event['id'])
+        time_slots = storage.get_time_slots_by_event_id(event['id']).copy()
+        attendees = storage.get_attendees_by_event_id(event['id']).copy()
 
         event['time_slots'] = time_slots
         event['attendees'] = attendees

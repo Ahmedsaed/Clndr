@@ -160,15 +160,17 @@
 }
 
 .btn {
-	width: 150px;
-	height: 40px;
+	width: 100px;
+	padding: 10px 20px;
 
-	background-color: transparent;
+	display: inline-block;
+	text-decoration: none;
 
 	border: 1px solid rgba(0,105,255,0.5);
 	border-radius: 4px;
 	transition: background-color 300ms ease-out, border-color 300ms ease-out, outline 300ms ease-out;
 
+	background-color: white;
 	color: rgb(0,105,255);
 	font-weight: 700;
 	font-size: 16px;

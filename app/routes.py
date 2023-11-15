@@ -69,6 +69,25 @@ def dashboard_page():
 
     return render_template('dashboard.html', user_id=user_id)
 
+@app.route('/create', methods=['GET', 'POST'])
+@login_required
+def create_event():
+    if request.method == 'POST':
+        # Retrieve form data
+        data = request.get_json()
+
+        # Perform validation and store user data in the database
+        storage.add_event(data['title'],
+                                     data['description'],
+                                     data['duration'],
+                                     data['location'],
+                                     data["slots"],
+                                     current_user.id)
+
+        return redirect('/dashboard')
+
+    return render_template('create.html')
+
 # Define a route to retrieve event page
 @app.route('/event/<event_id>')
 def event_page(event_id):

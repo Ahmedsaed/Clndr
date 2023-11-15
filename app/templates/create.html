@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+
+{% block title %}Clndr - Create{% endblock %}
+
+{% block styles %}
+	<link href="{{url_for('static', filename='styles/create.css')}}" rel="stylesheet" type="text/css">
+{% endblock %}
+
+{% block content %}
+<div id="window">
+	<div class="window-header">
+		<p>Create Event</p>
+		<button onclick="submitForm();" class="btn">Submit</button>
+	</div>
+	<div id="window-body">
+		<form id="create-form" action="/create" method="POST">
+			<div>
+				<div class="form-section">
+					<label for="event-title">Event Title</label>
+					<input type="text" id="event-title" name="event-title" placeholder="Event Title">
+				</div>
+				<div class="form-section">
+					<label for="event-location">Event Location</label>
+					<input type="text" id="event-location" name="event-location" placeholder="Event Location">
+				</div>
+				<div class="form-section">
+					<label for="event-duration">Event Duration</label>
+					<input type="number" id="event-duration" name="event-duration" placeholder="Event Duration (In Minutes)">
+				</div>
+				<div class="form-section full-height">
+					<label for="event-description">Event Description</label>
+					<textarea id="event-description" name="event-description" placeholder="Event Description"></textarea>
+				</div>
+			</div>
+			<div>
+				<div class="form-section">
+					<label for="event-slots">Event Time Slots</label>
+					<div id="event-slost">
+						<input type="date" id="event-slots-date" name="event-slots-date">
+						<input type="time" id="event-slots-time" name="event-slots-time">
+						<button id="event-slots-add" onclick="addSlot();" class="btn">Add</button>
+					</div>
+				</div>
+				<hr />
+				<div class="selected-slots">
+					<h3>Selected Slots</h3>
+					<div id="schedule">
+
+					</div>
+				</div>
+			</div>
+	</div>
+</div>
+<script src="{{url_for('static', filename='scripts/create.js')}}"></script>
+{% endblock %}
