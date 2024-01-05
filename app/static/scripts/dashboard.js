@@ -1,3 +1,14 @@
+function generateCsv(attendees) {
+  const csvContent = 'Name,Email\n';
+
+  const dataRows = attendees.map(attendee => `${attendee.name},${attendee.email}`);
+  const csvData = csvContent + dataRows.join('\n');
+
+  const csvBlob = new Blob([csvData], { type: `text/csv;charset=utf-8;`});
+
+  return csvBlob;
+}
+
 function updateScheduleInfo(data, schedule) {
   // Function to format the date as "Saturday, October 28" based on input format
   function formatDate(inputDate) {
@@ -139,6 +150,24 @@ function updateEventInfo(events) {
 		updateScheduleInfo(event["time_slots"], schedule);
 
 		const attendeesList = eventItem.querySelector("#attendees-list");
+
+    const downloadCsvButton = document.createElement('button');
+    downloadCsvButton.textContent = 'Download CSV';
+    downloadCsvButton.classList.add('download-csv-button');
+    eventItem.querySelector('.event-details').appendChild(downloadCsvButton);
+
+    downloadCsvButton.addEventListener('click', () => {
+      const csvBlob = generateCsv(event["attendees"]);
+
+      const link = document.createElement('a');
+      link.href = URL.createObjectURL(csvBlob);
+      link.download = `attendees_${event["id"]}.csv`;
+
+      document.body.appendChild(link);
+      link.click();
+
+      document.body.removeChild(link);
+    })
 
 		event.attendees.forEach(attendee => {
 			const attendeeRow = document.createElement("tr");

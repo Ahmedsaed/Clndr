@@ -140,7 +140,7 @@
 	align-items: flex-start;
 }
 
-.expand-btn, .copy-btn {
+.expand-btn, .copy-btn, .download-csv-button{
 	margin-right: 10px;
 	font-weight: 700;
 
@@ -284,6 +284,15 @@
 	text-align: center;
 
 	overflow: auto;
+}
+
+.download-csv-button {
+  background-color: rgb(0,105,255);
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
 .attendees-table > thead > tr > th {
