@@ -5,8 +5,6 @@ Group Meeting Scheduler
 ## Introduction
 Clndr is a web application that allows users to create events and invite participants to select their availability. The event creator can then view the most selected time slot and location to schedule the event.
 
-- Deployed Site: [Link to your deployed site](insert_link_here)
-- Final Project Blog Article: [Link to your blog article](insert_link_here)
 - Author(s) LinkedIn: [Ahmed Saed](insert_link_here), [Adham Essam](insert_link_here)
 
 ## Installation
